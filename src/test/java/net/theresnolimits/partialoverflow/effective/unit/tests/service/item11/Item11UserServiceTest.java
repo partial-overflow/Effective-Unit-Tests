@@ -69,12 +69,12 @@ public class Item11UserServiceTest {
 	}
 
 	@Test
-    @DisplayName("Create user profile signed up to email marketing")
+	@DisplayName("Create user profile signed up to email marketing")
 	void createSuccess() {
 		given(userRepository.save(userEntityArgumentCaptor.capture())).willReturn(mockSavedUserEntity);
 		given(employeeNumberGenerator.generate(TEST_REGION)).willReturn(TEST_EMPLOYEE_NUMBER);
 
-        CreateUserProfileResponse createUserProfileResponse = item11UserService.create(createUserProfileRequest);
+		CreateUserProfileResponse createUserProfileResponse = item11UserService.create(createUserProfileRequest);
 
 		assertThat(createUserProfileResponse.getEmployeeNumber(), is(equalTo(TEST_EMPLOYEE_NUMBER)));
 		assertThat(createUserProfileResponse.getEmailAddress(), is(equalTo(TEST_EMAIL_ADDRESS)));
@@ -91,7 +91,7 @@ public class Item11UserServiceTest {
 	}
 
 	@Test
-    @DisplayName("Create user profile not signed up to email marketing")
+	@DisplayName("Create user profile not signed up to email marketing")
 	void createSuccessWithShouldReceiveMarketingEmailsFalse() {
 		given(userRepository.save(userEntityArgumentCaptor.capture())).willReturn(mockSavedUserEntity);
 		given(employeeNumberGenerator.generate(TEST_REGION)).willReturn(TEST_EMPLOYEE_NUMBER);
@@ -127,12 +127,12 @@ public class Item11UserServiceTest {
 		then(eventBroadcaster).shouldHaveNoInteractions();
 	}
 
-    private static Stream<Arguments> invalidRegionsA() {
-        return Stream.of(
-                arguments(new Object[]{null}),
-                arguments("ThisRegionIs31CharactersLongThi")
-        );
-    }
+	private static Stream<Arguments> invalidRegionsA() {
+		return Stream.of(
+				arguments(new Object[]{null}),
+				arguments("ThisRegionIs31CharactersLongThi")
+		);
+	}
 
 	@ParameterizedTest(name = "Scenario: {1}")
 	@MethodSource("invalidRegionsB")
