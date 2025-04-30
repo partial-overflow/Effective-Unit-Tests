@@ -1,8 +1,8 @@
-package net.theresnolimits.partialoverflow.effective.unit.tests.item9.e;
+package net.theresnolimits.partialoverflow.effective.unit.tests.service.item9.b;
 
-import net.theresnolimits.partialoverflow.effective.unit.tests.service.item9.e.ColorPickerDelegate;
-import net.theresnolimits.partialoverflow.effective.unit.tests.service.item9.e.ColorService;
-import net.theresnolimits.partialoverflow.effective.unit.tests.service.item9.e.MyShape;
+import net.theresnolimits.partialoverflow.effective.unit.tests.service.item9.b.ColorPickerUtils;
+import net.theresnolimits.partialoverflow.effective.unit.tests.service.item9.b.ColorService;
+import net.theresnolimits.partialoverflow.effective.unit.tests.service.item9.b.MyShape;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -27,11 +27,11 @@ public class ColorServiceTest {
     private final ColorService colorService = new ColorService();
 
     @Mock
-    private ColorPickerDelegate colorPickerDelegate;
+    private ColorPickerUtils colorPickerUtils;
 
     @Test
     void drawSuccess() {
-        given(colorPickerDelegate.pick(TEST_SOURCE_COLOR)).willReturn(TEST_HEX_COLOR);
+        given(colorPickerUtils.pick(TEST_SOURCE_COLOR)).willReturn(TEST_HEX_COLOR);
 
         MyShape result = colorService.draw(TEST_HEIGHT, TEST_WIDTH, TEST_SOURCE_COLOR);
 
@@ -42,7 +42,7 @@ public class ColorServiceTest {
 
     @Test
     void drawOrangeShouldBeBlank() {
-        given(colorPickerDelegate.pick(TEST_SOURCE_COLOR)).willReturn(TEST_DEFAULT_HEX_COLOR);
+        given(colorPickerUtils.pick(TEST_SOURCE_COLOR)).willReturn(TEST_DEFAULT_HEX_COLOR);
 
         MyShape result = colorService.draw(TEST_HEIGHT, TEST_WIDTH, TEST_SOURCE_COLOR);
 

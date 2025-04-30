@@ -1,4 +1,4 @@
-package net.theresnolimits.partialoverflow.effective.unit.tests.item8;
+package net.theresnolimits.partialoverflow.effective.unit.tests.service.item8;
 
 import net.theresnolimits.partialoverflow.effective.unit.tests.domain.CreateUserProfileRequest;
 import net.theresnolimits.partialoverflow.effective.unit.tests.domain.CreateUserProfileResponse;
@@ -8,8 +8,7 @@ import net.theresnolimits.partialoverflow.effective.unit.tests.repositories.User
 import net.theresnolimits.partialoverflow.effective.unit.tests.service.EmployeeNumberGenerator;
 import net.theresnolimits.partialoverflow.effective.unit.tests.service.EventBroadcaster;
 import net.theresnolimits.partialoverflow.effective.unit.tests.service.MarketingEmailService;
-import net.theresnolimits.partialoverflow.effective.unit.tests.item5.TestDataCreator;
-import net.theresnolimits.partialoverflow.effective.unit.tests.service.item8.Item8UserService;
+import net.theresnolimits.partialoverflow.effective.unit.tests.service.item5.TestDataCreator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -19,11 +18,11 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import static net.theresnolimits.partialoverflow.effective.unit.tests.item5.TestDataCreator.TEST_EMAIL_ADDRESS;
-import static net.theresnolimits.partialoverflow.effective.unit.tests.item5.TestDataCreator.TEST_EMPLOYEE_NUMBER;
-import static net.theresnolimits.partialoverflow.effective.unit.tests.item5.TestDataCreator.TEST_REGION;
-import static net.theresnolimits.partialoverflow.effective.unit.tests.item5.TestDataCreator.TEST_UUID;
-import static net.theresnolimits.partialoverflow.effective.unit.tests.item5.TestDataCreator.UUID_PATTERN;
+import static net.theresnolimits.partialoverflow.effective.unit.tests.service.item5.TestDataCreator.TEST_EMAIL_ADDRESS;
+import static net.theresnolimits.partialoverflow.effective.unit.tests.service.item5.TestDataCreator.TEST_EMPLOYEE_NUMBER;
+import static net.theresnolimits.partialoverflow.effective.unit.tests.service.item5.TestDataCreator.TEST_REGION;
+import static net.theresnolimits.partialoverflow.effective.unit.tests.service.item5.TestDataCreator.TEST_UUID;
+import static net.theresnolimits.partialoverflow.effective.unit.tests.service.item5.TestDataCreator.UUID_PATTERN;
 import static net.theresnolimits.partialoverflow.effective.unit.tests.service.item8.Item8UserService.INVALID_REGION_MESSAGE;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;

@@ -1,4 +1,4 @@
-package net.theresnolimits.partialoverflow.effective.unit.tests.item5;
+package net.theresnolimits.partialoverflow.effective.unit.tests.service.item5;
 
 import net.theresnolimits.partialoverflow.effective.unit.tests.domain.CreateUserProfileRequest;
 import net.theresnolimits.partialoverflow.effective.unit.tests.domain.UserEntity;

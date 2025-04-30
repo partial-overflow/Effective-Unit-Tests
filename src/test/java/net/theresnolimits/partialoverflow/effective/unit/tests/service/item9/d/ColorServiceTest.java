@@ -1,4 +1,4 @@
-package net.theresnolimits.partialoverflow.effective.unit.tests.item9.d;
+package net.theresnolimits.partialoverflow.effective.unit.tests.service.item9.d;
 
 import net.theresnolimits.partialoverflow.effective.unit.tests.service.item9.a.ColorPickerUtils;
 import net.theresnolimits.partialoverflow.effective.unit.tests.service.item9.a.ColorService;

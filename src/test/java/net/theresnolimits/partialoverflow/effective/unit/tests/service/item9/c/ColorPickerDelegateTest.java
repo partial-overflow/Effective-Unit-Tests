@@ -1,4 +1,4 @@
-package net.theresnolimits.partialoverflow.effective.unit.tests.item9.c;
+package net.theresnolimits.partialoverflow.effective.unit.tests.service.item9.c;
 
 import net.theresnolimits.partialoverflow.effective.unit.tests.service.item9.c.ColorPickerDelegate;
 import org.junit.jupiter.api.Test;

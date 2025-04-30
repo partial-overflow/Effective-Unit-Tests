@@ -1,4 +1,4 @@
-package net.theresnolimits.partialoverflow.effective.unit.tests.item9.a;
+package net.theresnolimits.partialoverflow.effective.unit.tests.service.item9.a;
 
 import net.theresnolimits.partialoverflow.effective.unit.tests.service.item9.a.ColorService;
 import net.theresnolimits.partialoverflow.effective.unit.tests.service.item9.a.MyShape;
